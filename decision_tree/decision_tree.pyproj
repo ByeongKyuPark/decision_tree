@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>74f89fe8-c42f-4f8b-9a33-dfc342f754ce</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>decision_tree.py</StartupFile>
+    <StartupFile>k_cluster.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="decision_tree.py" />
+    <Compile Include="k_cluster.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
