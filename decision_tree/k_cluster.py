@@ -1,5 +1,5 @@
-#HW7-2-(1) Use the k-means algorithm to cluster the data into 2 clusters. Start with centroids m1 = (1; 1; 0) and
-#          m2 = (2; 3; 0). Output centroids and clusters.
+#HW7-2-(2)  Use the k-means algorithm to cluster the data into 3 clusters. Start with centroids m1 = (0, 0, 0),
+#           m2 = (3, 3, 2), and m3 = (2, 0, 0). Output centroids and clusters.
 # ByeongKyu Park (byeonggyu.park)
 
 import numpy as np
@@ -21,7 +21,7 @@ D = np.array([
 ])
 
 # the number of clusters
-k = 2
+k = 3
 
 # init centroids(has not been used for this homework)
 def initialize_centroids(points, k):
@@ -37,7 +37,7 @@ def initialize_centroids(points, k):
 
 # initialize centroids
 #centroids = initialize_centroids(D, k)
-centroids = np.array([[1, 1, 0], [2, 3, 0]])
+centroids = np.array([[0, 0, 0],[3,3,2], [2, 0, 0]])
 
 # assign nearest centroid
 def assign_points_to_centroids(points, centroids):
@@ -103,7 +103,7 @@ ax.set_ylabel('X2')
 ax.set_zlabel('X3')
 
 # title
-ax.set_title('2-Means Clustering (with Grid Lines)')
+ax.set_title('3-Means Clustering (with Grid Lines)')
 
 # plotting
 plt.show()
