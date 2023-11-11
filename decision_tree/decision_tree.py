@@ -5,11 +5,11 @@ from graphviz import Digraph
 
 # Define the dataset as given in the user's image
 data = pd.DataFrame({
-    'Outlook': ['s', 'c', 'r', 'r', 's', 'r', 'r', 'c', 'c', 'c'],
-    'Temperature': ['m', 'm', 'f', 'm', 'h', 'f', 'h', 'h', 'm', 'h'],
-    'Wind': ['y', 'y', 'y', 'y', 'n', 'n', 'n', 'n', 'n', 'n'],
-    'Time': ['m', 'e', 'e', 'a', 'a', 'm', 'm', 'm', 'e', 'a'],
-    'Label': ['y', 'n', 'n', 'y', 'n', 'n', 'y', 'y', 'y', 'y']
+	'Age': [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 2],
+	'Prescription': [1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2],
+	'Astigmatic': [1, 1, 2, 2, 1, 1, 2, 2, 1, 1, 2, 2, 1, 1, 2, 2, 1, 1, 2, 2, 1, 1, 2, 1],
+	'Tear': [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+	'Label': [3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 3, 3, 3, 3, 1, 3, 2, 3, 2]
 })
 
 # Function to calculate the entropy of the dataset
@@ -34,13 +34,14 @@ def ID3(data, originaldata, features, target_attribute_name="Label", parent_node
     if len(np.unique(data[target_attribute_name])) <= 1:
         return (np.unique(data[target_attribute_name])[0], data.index.tolist())
     
-    # If the dataset is empty, return the mode target feature value of the original dataset
-    elif len(data) == 0:
-        return (np.unique(originaldata[target_attribute_name])[np.argmax(np.unique(originaldata[target_attribute_name], return_counts=True)[1])], [])
-    
-    # If the feature space is empty, return the mode target feature value of the dataset
+    # If the subset is empty, return the most common class of the parent subset
+    elif data.empty:
+        return (parent_node_class if parent_node_class is not None else np.unique(originaldata[target_attribute_name])[np.argmax(np.unique(originaldata[target_attribute_name], return_counts=True)[1])], [])
+        
+    # If there are no more attributes to consider, return the most common class in the current subset
     elif len(features) == 0:
-        return (parent_node_class, data.index.tolist())
+        return (np.unique(data[target_attribute_name])[np.argmax(np.unique(data[target_attribute_name], return_counts=True)[1])], data.index.tolist())
+    
     
     # If none of the above conditions hold true, grow the tree!
     else:
