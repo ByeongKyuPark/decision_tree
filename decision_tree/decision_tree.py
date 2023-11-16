@@ -76,27 +76,41 @@ def ID3(data, originaldata, features, target_attribute_name="Label", parent_node
         return(tree)
 
 #---------------------------------------------------------------------PLOTTING FUNCTION
-def plot_tree(graph, tree, parent_name, counter=0):
-    # Base case
-    if type(tree) == tuple:
+def plot_tree(graph, tree, parent_name, node_path):
+    # Base case: if the tree is a tuple, we have reached a leaf
+    if isinstance(tree, tuple):
         node_label = f"Leaf: {tree[0]}\nRows: {tree[1]}"
-        graph.node(f'leaf{counter}', node_label, shape='box')
-        graph.edge(parent_name, f'leaf{counter}')
-        return counter + 1
+        # Use the unique node_path as the name for the leaf node
+        leaf_name = f'leaf_{node_path}'
+        graph.node(leaf_name, node_label, shape='box')
+        # Connect the parent node to this leaf
+        graph.edge(parent_name, leaf_name)
+        return
 
-    # Recursive case
+    # Recursive case: iterate through the branches of the tree
     for split_feature, subtree in tree.items():
-        graph.node(split_feature, split_feature)
+        # Use the unique node_path and feature name to create a unique node name
+        feature_name = str(split_feature)
+        node_name = f'{node_path}_{feature_name}'
+        # Create the node for this feature split
+        graph.node(node_name, feature_name)
+        # Connect the parent node to this node
         if parent_name:
-            graph.edge(parent_name, split_feature)
+            graph.edge(parent_name, node_name)
         
+        # Iterate through the possible values of the feature
         for feature_value, child_tree in subtree.items():
-            child_name = f"{split_feature}_{feature_value}"
-            graph.node(child_name, f"{feature_value}")
-            graph.edge(split_feature, child_name)
-            counter = plot_tree(graph, child_tree, child_name, counter)
+            # Create a unique path for the next node, including the feature value
+            child_path = f'{node_name}_{feature_value}'
+            # Convert feature_value to string to create the edge label
+            value_str = str(feature_value)
+            # Create a child node for each feature value
+            graph.node(child_path, value_str)
+            # Connect the current node to the child node
+            graph.edge(node_name, child_path)
+            # Recursive call to plot the subtree
+            plot_tree(graph, child_tree, child_path, child_path)
 
-    return counter
 #--------------------------------------------------------------------- MAIN
 # (1) build the tree
 tree = ID3(data, data, data.columns[:-1])
