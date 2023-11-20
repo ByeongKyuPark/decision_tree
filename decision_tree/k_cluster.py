@@ -70,7 +70,7 @@ def k_means(points, centroids, k):
 # run k-means clustering
 final_centroids, closest_centroids = k_means(D, centroids, k)
 
-# prints the final centroids
+# prints the final centroids    
 print("Centroids: ")
 print(final_centroids)
 print()
