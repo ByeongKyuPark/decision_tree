@@ -1,0 +1,1129 @@
+// Titanic ecision Tree
+digraph {
+	root_Sex [label=Sex]
+	root_Sex_Male [label=Male]
+	root_Sex -> root_Sex_Male
+	root_Sex_Male_Pclass [label=Pclass]
+	root_Sex_Male -> root_Sex_Male_Pclass
+	"root_Sex_Male_Pclass_1.0" [label=1.0]
+	root_Sex_Male_Pclass -> "root_Sex_Male_Pclass_1.0"
+	"root_Sex_Male_Pclass_1.0_Age" [label=Age]
+	"root_Sex_Male_Pclass_1.0" -> "root_Sex_Male_Pclass_1.0_Age"
+	"root_Sex_Male_Pclass_1.0_Age_Child" [label=Child]
+	"root_Sex_Male_Pclass_1.0_Age" -> "root_Sex_Male_Pclass_1.0_Age_Child"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Child" [label="Leaf: Survived
+PassengerId: [306, 446, 803]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Child" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Child"
+	"root_Sex_Male_Pclass_1.0_Age_Young Adult" [label="Young Adult"]
+	"root_Sex_Male_Pclass_1.0_Age" -> "root_Sex_Male_Pclass_1.0_Age_Young Adult"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Young Adult" [label="Leaf: Survived
+PassengerId: [551]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Young Adult" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Young Adult"
+	"root_Sex_Male_Pclass_1.0_Age_Adult" [label=Adult]
+	"root_Sex_Male_Pclass_1.0_Age" -> "root_Sex_Male_Pclass_1.0_Age_Adult"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare" [label=Fare]
+	"root_Sex_Male_Pclass_1.0_Age_Adult" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Low" [label=Low]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Low"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Low" [label="Leaf: Not Survived
+PassengerId: [264, 807, 823, 873]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Low" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Low"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium" [label=Medium]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_0.0_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_0.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_0.0_SibSp"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_0.0_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_0.0_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_0.0_SibSp_0.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_0.0_SibSp_0.0" [label="Leaf: Survived
+PassengerId: [24, 84, 188, 332, 340, 431, 448, 450, 461, 463, 468, 493, 513, 516, 537, 573, 608, 663, 702, 708, 783, 858]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_0.0_SibSp_0.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_0.0_SibSp_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_1.0_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_1.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_1.0_SibSp"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_1.0_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_1.0_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_1.0_SibSp_0.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_1.0_SibSp_0.0" [label="Leaf: Not Survived
+PassengerId: [31, 175, 210, 453, 488, 584, 605, 633, 648, 890]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_1.0_SibSp_0.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_0.0_Embarked_1.0_SibSp_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_1.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_1.0" [label="Leaf: Not Survived
+PassengerId: [274]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_1.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Medium_Parch_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High" [label=High]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_0.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_0.0" [label="Leaf: Not Survived
+PassengerId: [7, 103, 111, 125, 868]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_0.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch_0.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch_0.0" [label="Leaf: Not Survived
+PassengerId: [36, 63, 93, 138, 225, 337, 435, 622, 672, 691, 713, 725, 742, 749]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch_0.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch_1.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch_1.0" [label="Leaf: Not Survived
+PassengerId: [249, 263]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch_1.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_0.0_SibSp_1.0_Parch_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch_0.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch_0.0" [label="Leaf: Not Survived
+PassengerId: [140, 682, 790]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch_0.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch_1.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch_1.0" [label="Leaf: Not Survived
+PassengerId: [98, 156]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch_1.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_0.0_Parch_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_1.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_1.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_1.0_Parch"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_1.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_1.0_Parch" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_1.0_Parch_0.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_1.0_Parch_0.0" [label="Leaf: Survived
+PassengerId: [35, 371, 454, 485, 600, 646]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_1.0_Parch_0.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_1.0_SibSp_1.0_Parch_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_2.0" [label=2.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_2.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_2.0" [label="Leaf: Not Survived
+PassengerId: [246]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_2.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_High_Embarked_2.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High" [label="Very High"]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_0.0_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_0.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_0.0_Embarked"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_0.0_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_0.0_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_0.0_Embarked_1.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_0.0_Embarked_1.0" [label="Leaf: Not Survived
+PassengerId: [374, 738]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_0.0_Embarked_1.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_0.0_Embarked_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked_0.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked_0.0" [label="Leaf: Not Survived
+PassengerId: [333]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked_0.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked_1.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked_1.0" [label="Leaf: Not Survived
+PassengerId: [119, 680]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked_1.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_1.0_Embarked_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_2.0" [label=2.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_2.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_2.0" [label="Leaf: Not Survived
+PassengerId: [378, 660]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_2.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_0.0_Parch_2.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked_0.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked_0.0" [label="Leaf: Survived
+PassengerId: [391]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked_0.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked_1.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked_1.0" [label="Leaf: Not Survived
+PassengerId: [506, 545, 699]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked_1.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_1.0_Embarked_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_2.0" [label=2.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_2.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_2.0" [label="Leaf: Survived
+PassengerId: [661]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_2.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_2.0"
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_3.0" [label=3.0]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_3.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_3.0" [label="Leaf: Not Survived
+PassengerId: [28]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_3.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Adult_Fare_Very High_SibSp_3.0"
+	"root_Sex_Male_Pclass_1.0_Age_Senior" [label=Senior]
+	"root_Sex_Male_Pclass_1.0_Age" -> "root_Sex_Male_Pclass_1.0_Age_Senior"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare" [label=Fare]
+	"root_Sex_Male_Pclass_1.0_Age_Senior" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium" [label=Medium]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp_0.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp_0.0" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp_0.0_Parch"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp_0.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp_0.0_Parch" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp_0.0_Parch_0.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp_0.0_Parch_0.0" [label="Leaf: Not Survived
+PassengerId: [171, 253, 457, 546, 556, 626, 631, 695]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp_0.0_Parch_0.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_0.0_SibSp_0.0_Parch_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_1.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_1.0" [label="Leaf: Not Survived
+PassengerId: [97, 494]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_1.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Medium_Embarked_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High" [label=High]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_0.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_0.0" [label="Leaf: Not Survived
+PassengerId: [746]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_0.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp_0.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp_0.0" [label="Leaf: Not Survived
+PassengerId: [55]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp_0.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp_0.0"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp_1.0"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp_1.0" [label="Leaf: Survived
+PassengerId: [588]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp_1.0" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_High_Embarked_1.0_SibSp_1.0"
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Very High" [label="Very High"]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare" -> "root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Very High"
+	"leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Very High" [label="Leaf: Not Survived
+PassengerId: [439]" shape=box]
+	"root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Very High" -> "leaf_root_Sex_Male_Pclass_1.0_Age_Senior_Fare_Very High"
+	"root_Sex_Male_Pclass_2.0" [label=2.0]
+	root_Sex_Male_Pclass -> "root_Sex_Male_Pclass_2.0"
+	"root_Sex_Male_Pclass_2.0_Age" [label=Age]
+	"root_Sex_Male_Pclass_2.0" -> "root_Sex_Male_Pclass_2.0_Age"
+	"root_Sex_Male_Pclass_2.0_Age_Child" [label=Child]
+	"root_Sex_Male_Pclass_2.0_Age" -> "root_Sex_Male_Pclass_2.0_Age_Child"
+	"leaf_root_Sex_Male_Pclass_2.0_Age_Child" [label="Leaf: Survived
+PassengerId: [79, 184, 194, 341, 408, 550, 756, 828, 832]" shape=box]
+	"root_Sex_Male_Pclass_2.0_Age_Child" -> "leaf_root_Sex_Male_Pclass_2.0_Age_Child"
+	"root_Sex_Male_Pclass_2.0_Age_Young Adult" [label="Young Adult"]
+	"root_Sex_Male_Pclass_2.0_Age" -> "root_Sex_Male_Pclass_2.0_Age_Young Adult"
+	"leaf_root_Sex_Male_Pclass_2.0_Age_Young Adult" [label="Leaf: Not Survived
+PassengerId: [792, 842]" shape=box]
+	"root_Sex_Male_Pclass_2.0_Age_Young Adult" -> "leaf_root_Sex_Male_Pclass_2.0_Age_Young Adult"
+	"root_Sex_Male_Pclass_2.0_Age_Adult" [label=Adult]
+	"root_Sex_Male_Pclass_2.0_Age" -> "root_Sex_Male_Pclass_2.0_Age_Adult"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_2.0_Age_Adult" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare" [label=Fare]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium" [label=Medium]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp_0.0"
+	"leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp_0.0" [label="Leaf: Not Survived
+PassengerId: [21, 22, 71, 135, 145, 150, 151, 179, 192, 214, 220, 222, 227, 229, 233, 235, 239, 240, 243, 266, 289, 318, 343, 344, 345, 398, 399, 419, 440, 464, 552, 563, 583, 587, 620, 659, 667, 674, 696, 706, 715, 723, 724, 734, 735, 758, 796, 801, 809, 813, 865, 884, 887]" shape=box]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp_0.0" -> "leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp_0.0"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp_1.0"
+	"leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp_1.0" [label="Leaf: Not Survived
+PassengerId: [100, 118, 218, 237, 250, 406, 477, 544, 595, 729, 862]" shape=box]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp_1.0" -> "leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_Medium_SibSp_1.0"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_High" [label=High]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_High"
+	"leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_High" [label="Leaf: Not Survived
+PassengerId: [73, 121, 386, 656, 666]" shape=box]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_High" -> "leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_0.0_Fare_High"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_1.0"
+	"leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_1.0" [label="Leaf: Not Survived
+PassengerId: [123, 136, 293, 309, 362]" shape=box]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_1.0" -> "leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_1.0"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_2.0" [label=2.0]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_2.0"
+	"leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_2.0" [label="Leaf: Not Survived
+PassengerId: [627]" shape=box]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_2.0" -> "leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_0.0_Embarked_2.0"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_1.0"
+	"leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_1.0" [label="Leaf: Not Survived
+PassengerId: [146, 315, 530, 638, 818, 849]" shape=box]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_1.0" -> "leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_1.0"
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_2.0" [label=2.0]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch" -> "root_Sex_Male_Pclass_2.0_Age_Adult_Parch_2.0"
+	"leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_2.0" [label="Leaf: Not Survived
+PassengerId: [149, 451, 686]" shape=box]
+	"root_Sex_Male_Pclass_2.0_Age_Adult_Parch_2.0" -> "leaf_root_Sex_Male_Pclass_2.0_Age_Adult_Parch_2.0"
+	"root_Sex_Male_Pclass_2.0_Age_Senior" [label=Senior]
+	"root_Sex_Male_Pclass_2.0_Age" -> "root_Sex_Male_Pclass_2.0_Age_Senior"
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_2.0_Age_Senior" -> "root_Sex_Male_Pclass_2.0_Age_Senior_SibSp"
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp" -> "root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0"
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0" -> "root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch"
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch" -> "root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0"
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare" [label=Fare]
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0" -> "root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare"
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare_Medium" [label=Medium]
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare" -> "root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare_Medium"
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare_Medium_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare_Medium" -> "root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare_Medium_Embarked"
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare_Medium_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare_Medium_Embarked" -> "root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare_Medium_Embarked_0.0"
+	"leaf_root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare_Medium_Embarked_0.0" [label="Leaf: Not Survived
+PassengerId: [34, 571, 673]" shape=box]
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare_Medium_Embarked_0.0" -> "leaf_root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_0.0_Parch_0.0_Fare_Medium_Embarked_0.0"
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp" -> "root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_1.0"
+	"leaf_root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_1.0" [label="Leaf: Not Survived
+PassengerId: [685]" shape=box]
+	"root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_1.0" -> "leaf_root_Sex_Male_Pclass_2.0_Age_Senior_SibSp_1.0"
+	"root_Sex_Male_Pclass_3.0" [label=3.0]
+	root_Sex_Male_Pclass -> "root_Sex_Male_Pclass_3.0"
+	"root_Sex_Male_Pclass_3.0_Fare" [label=Fare]
+	"root_Sex_Male_Pclass_3.0" -> "root_Sex_Male_Pclass_3.0_Fare"
+	"root_Sex_Male_Pclass_3.0_Fare_Low" [label=Low]
+	"root_Sex_Male_Pclass_3.0_Fare" -> "root_Sex_Male_Pclass_3.0_Fare_Low"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age" [label=Age]
+	"root_Sex_Male_Pclass_3.0_Fare_Low" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Child" [label=Child]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Child"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Child" [label="Leaf: Survived
+PassengerId: [804]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Child" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Child"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult" [label="Young Adult"]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked_0.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked_0.0" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked_0.0_Parch"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked_0.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked_0.0_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked_0.0_Parch_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked_0.0_Parch_0.0" [label="Leaf: Not Survived
+PassengerId: [139, 164, 221, 283, 434, 501, 575, 765, 845]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked_0.0_Parch_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_0.0_Embarked_0.0_Parch_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_1.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_1.0" [label="Leaf: Not Survived
+PassengerId: [353, 533, 722]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_1.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Young Adult_SibSp_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult" [label=Adult]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch_0.0" [label="Leaf: Not Survived
+PassengerId: [5, 13, 38, 52, 68, 76, 81, 82, 90, 91, 92, 95, 104, 106, 109, 113, 116, 128, 130, 132, 147, 153, 158, 163, 174, 180, 190, 201, 203, 205, 211, 213, 223, 226, 228, 232, 244, 272, 282, 284, 287, 288, 295, 303, 314, 321, 322, 339, 350, 351, 356, 364, 366, 373, 380, 383, 392, 396, 401, 402, 407, 409, 415, 423, 430, 442, 462, 466, 472, 479, 483, 489, 492, 495, 500, 515, 520, 522, 529, 562, 567, 570, 580, 589, 591, 593, 598, 604, 607, 615, 624, 629, 632, 637, 641, 647, 653, 664, 669, 676, 677, 683, 689, 697, 700, 714, 716, 720, 726, 745, 753, 754, 757, 759, 762, 770, 771, 772, 776, 785, 786, 795, 805, 806, 811, 815, 819, 822, 834, 835, 837, 841, 846, 871, 874, 877, 878, 882, 885]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch_1.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch_1.0" [label="Leaf: Not Survived
+PassengerId: [198]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch_1.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_0.0_Parch_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_1.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_1.0" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_1.0_Parch"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_1.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_1.0_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_1.0_Parch_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_1.0_Parch_0.0" [label="Leaf: Not Survived
+PassengerId: [58, 61, 131, 204, 245, 286, 297, 379, 456, 554, 662, 694, 763, 799, 844, 848]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_1.0_Parch_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_1.0_Parch_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_2.0" [label=2.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_2.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_2.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_2.0" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_2.0_Parch"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_2.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_2.0_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_2.0_Parch_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_2.0_Parch_0.0" [label="Leaf: Not Survived
+PassengerId: [144, 422, 511, 526, 704, 750, 891]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_2.0_Parch_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_0.0_Embarked_2.0_Parch_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_0.0_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_0.0" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_0.0_Embarked"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_0.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_0.0_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_0.0_Embarked_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_0.0_Embarked_0.0" [label="Leaf: Not Survived
+PassengerId: [1, 268, 372, 443, 478, 665, 705]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_0.0_Embarked_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_0.0_Embarked_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_1.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_1.0" [label="Leaf: Not Survived
+PassengerId: [176]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_1.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_1.0_Parch_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_2.0" [label=2.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_2.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_2.0" [label="Leaf: Not Survived
+PassengerId: [70, 105, 393]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_2.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Adult_SibSp_2.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Senior" [label=Senior]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age" -> "root_Sex_Male_Pclass_3.0_Fare_Low_Age_Senior"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Senior" [label="Leaf: Not Survived
+PassengerId: [117, 281, 327, 852]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Low_Age_Senior" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Low_Age_Senior"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium" [label=Medium]
+	"root_Sex_Male_Pclass_3.0_Fare" -> "root_Sex_Male_Pclass_3.0_Fare_Medium"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age" [label=Age]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child" [label=Child]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_0.0" [label="Leaf: Not Survived
+PassengerId: [732]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_1.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_1.0" [label="Leaf: Survived
+PassengerId: [752]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_1.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_2.0" [label=2.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_2.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_2.0" [label="Leaf: Survived
+PassengerId: [166]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_2.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Child_Parch_2.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult" [label=Adult]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked_0.0" [label="Leaf: Not Survived
+PassengerId: [154, 161, 509, 576, 625, 688, 736, 812]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked_1.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked_1.0" [label="Leaf: Survived
+PassengerId: [208]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked_1.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_0.0_Age_Adult_Embarked_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age" [label=Age]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Child" [label=Child]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Child"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Child" [label="Leaf: Survived
+PassengerId: [349, 490, 789, 870]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Child" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Child"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult" [label="Young Adult"]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked_0.0" [label="Leaf: Not Survived
+PassengerId: [87, 747]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked_1.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked_1.0" [label="Leaf: Survived
+PassengerId: [126]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked_1.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Young Adult_Embarked_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult" [label=Adult]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_0.0" [label="Leaf: Not Survived
+PassengerId: [14, 94, 207, 254, 354, 361, 404, 425, 549, 596, 606, 617, 744]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch_0.0" [label="Leaf: Not Survived
+PassengerId: [74, 621]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch_1.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch_1.0" [label="Leaf: Survived
+PassengerId: [623]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch_1.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_1.0_Parch_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_2.0" [label=2.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_2.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_2.0" [label="Leaf: Not Survived
+PassengerId: [189]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_2.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_1.0_Age_Adult_Embarked_2.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_2.0" [label=2.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_2.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_2.0" [label="Leaf: Not Survived
+PassengerId: [334, 566, 861]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_2.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_2.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_3.0" [label=3.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_3.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_3.0" [label="Leaf: Not Survived
+PassengerId: [8, 64, 820]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_3.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_3.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0" [label=4.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_1.0" [label=1.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_1.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_1.0" [label="Leaf: Not Survived
+PassengerId: [17, 51, 165, 172, 267, 279, 687, 788, 825]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_1.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_1.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0" [label=2.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age" [label=Age]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age_Child" [label=Child]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age_Child"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age_Child_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age_Child" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age_Child_Embarked"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age_Child_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age_Child_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age_Child_Embarked_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age_Child_Embarked_0.0" [label="Leaf: Not Survived
+PassengerId: [183, 262, 851]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age_Child_Embarked_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_4.0_Parch_2.0_Age_Child_Embarked_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_5.0" [label=5.0]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_5.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_5.0" [label="Leaf: Not Survived
+PassengerId: [60, 387, 481, 684]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_5.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_Medium_SibSp_5.0"
+	"root_Sex_Male_Pclass_3.0_Fare_High" [label=High]
+	"root_Sex_Male_Pclass_3.0_Fare" -> "root_Sex_Male_Pclass_3.0_Fare_High"
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp" [label=SibSp]
+	"root_Sex_Male_Pclass_3.0_Fare_High" -> "root_Sex_Male_Pclass_3.0_Fare_High_SibSp"
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp" -> "root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked" [label=Embarked]
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0" -> "root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked"
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked" -> "root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0"
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age" [label=Age]
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0" -> "root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age"
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age_Adult" [label=Adult]
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age" -> "root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age_Adult"
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age_Adult_Parch" [label=Parch]
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age_Adult" -> "root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age_Adult_Parch"
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age_Adult_Parch_0.0" [label=0.0]
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age_Adult_Parch" -> "root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age_Adult_Parch_0.0"
+	"leaf_root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age_Adult_Parch_0.0" [label="Leaf: Survived
+PassengerId: [75, 170, 510, 839]" shape=box]
+	"root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age_Adult_Parch_0.0" -> "leaf_root_Sex_Male_Pclass_3.0_Fare_High_SibSp_0.0_Embarked_0.0_Age_Adult_Parch_0.0"
+	root_Sex_Female [label=Female]
+	root_Sex -> root_Sex_Female
+	root_Sex_Female_Pclass [label=Pclass]
+	root_Sex_Female -> root_Sex_Female_Pclass
+	"root_Sex_Female_Pclass_1.0" [label=1.0]
+	root_Sex_Female_Pclass -> "root_Sex_Female_Pclass_1.0"
+	"root_Sex_Female_Pclass_1.0_Age" [label=Age]
+	"root_Sex_Female_Pclass_1.0" -> "root_Sex_Female_Pclass_1.0_Age"
+	"root_Sex_Female_Pclass_1.0_Age_Child" [label=Child]
+	"root_Sex_Female_Pclass_1.0_Age" -> "root_Sex_Female_Pclass_1.0_Age_Child"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Child" [label="Leaf: Not Survived
+PassengerId: [298]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Child" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Child"
+	"root_Sex_Female_Pclass_1.0_Age_Young Adult" [label="Young Adult"]
+	"root_Sex_Female_Pclass_1.0_Age" -> "root_Sex_Female_Pclass_1.0_Age_Young Adult"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Young Adult" [label="Leaf: Survived
+PassengerId: [308, 330, 436, 505, 690, 782, 854]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Young Adult" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Young Adult"
+	"root_Sex_Female_Pclass_1.0_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_1.0_Age" -> "root_Sex_Female_Pclass_1.0_Age_Adult"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_1.0_Age_Adult" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_0.0"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_0.0" [label="Leaf: Survived
+PassengerId: [12, 137, 797, 863, 888]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_0.0" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_0.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch" [label=Parch]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp" [label=SibSp]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp_0.0"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp_0.0" [label="Leaf: Survived
+PassengerId: [178, 195, 711, 843]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp_0.0" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp_0.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp_1.0"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp_1.0" [label="Leaf: Survived
+PassengerId: [557]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp_1.0" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_0.0_SibSp_1.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_2.0"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_2.0" [label="Leaf: Survived
+PassengerId: [540]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_2.0" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Medium_Embarked_1.0_Parch_2.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_High" [label=High]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_High"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_High" [label="Leaf: Survived
+PassengerId: [2, 4, 53, 62, 152, 219, 231, 258, 291, 292, 310, 311, 357, 370, 384, 413, 487, 497, 514, 521, 524, 541, 559, 572, 578, 586, 592, 628, 642, 760, 766, 810, 821, 836, 872, 880]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_High" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_High"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High" [label="Very High"]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch" [label=Parch]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_0.0"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_0.0" [label="Leaf: Survived
+PassengerId: [196, 216, 259, 270, 326, 338, 381, 394, 538, 610, 701, 709, 717, 731]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_0.0" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_0.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_1.0"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_1.0" [label="Leaf: Survived
+PassengerId: [269, 300, 320, 582, 780, 857]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_1.0" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_1.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp" [label=SibSp]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_0.0"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_0.0" [label="Leaf: Survived
+PassengerId: [319]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_0.0" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_0.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_1.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_1.0_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_1.0" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_1.0_Embarked"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_1.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_1.0_Embarked" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_1.0_Embarked_0.0"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_1.0_Embarked_0.0" [label="Leaf: Not Survived
+PassengerId: [499, 764]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_1.0_Embarked_0.0" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_1.0_Embarked_0.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_2.0"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_2.0" [label="Leaf: Survived
+PassengerId: [312, 743]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_2.0" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_2.0"
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_3.0" [label=3.0]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp" -> "root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_3.0"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_3.0" [label="Leaf: Survived
+PassengerId: [89, 342]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_3.0" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Adult_Fare_Very High_Parch_2.0_SibSp_3.0"
+	"root_Sex_Female_Pclass_1.0_Age_Senior" [label=Senior]
+	"root_Sex_Female_Pclass_1.0_Age" -> "root_Sex_Female_Pclass_1.0_Age_Senior"
+	"leaf_root_Sex_Female_Pclass_1.0_Age_Senior" [label="Leaf: Survived
+PassengerId: [276, 367, 830]" shape=box]
+	"root_Sex_Female_Pclass_1.0_Age_Senior" -> "leaf_root_Sex_Female_Pclass_1.0_Age_Senior"
+	"root_Sex_Female_Pclass_2.0" [label=2.0]
+	root_Sex_Female_Pclass -> "root_Sex_Female_Pclass_2.0"
+	"root_Sex_Female_Pclass_2.0_Parch" [label=Parch]
+	"root_Sex_Female_Pclass_2.0" -> "root_Sex_Female_Pclass_2.0_Parch"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_2.0_Parch" -> "root_Sex_Female_Pclass_2.0_Parch_0.0"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp" [label=SibSp]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age" [label=Age]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Young Adult" [label="Young Adult"]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Young Adult"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Young Adult" [label="Leaf: Survived
+PassengerId: [85]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Young Adult" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Young Adult"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Adult"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Adult_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Adult" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Adult_Fare"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Adult_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Adult_Fare" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Adult_Fare_Medium"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Adult_Fare_Medium" [label="Leaf: Survived
+PassengerId: [16, 57, 67, 124, 162, 191, 200, 212, 328, 346, 347, 358, 388, 400, 428, 444, 459, 517, 527, 577, 636, 707, 718, 748, 773, 866]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Adult_Fare_Medium" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_0.0_Age_Adult_Fare_Medium"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare_Medium"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare_Medium_Age" [label=Age]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare_Medium" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare_Medium_Age"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare_Medium_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare_Medium_Age" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare_Medium_Age_Adult"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare_Medium_Age_Adult" [label="Leaf: Survived
+PassengerId: [42, 54, 134, 317, 427, 433, 519, 547, 855]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare_Medium_Age_Adult" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_1.0_Fare_Medium_Age_Adult"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_3.0" [label=3.0]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_3.0"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_3.0" [label="Leaf: Survived
+PassengerId: [727]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_3.0" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_0.0_SibSp_3.0"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_1.0"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_1.0" [label="Leaf: Survived
+PassengerId: [10, 390, 474, 867, 875]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_1.0" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_1.0"
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked" -> "root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_2.0"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_2.0" [label="Leaf: Survived
+PassengerId: [323]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_2.0" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_0.0_Embarked_2.0"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_2.0_Parch" -> "root_Sex_Female_Pclass_2.0_Parch_1.0"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp" [label=SibSp]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0" -> "root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp" -> "root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_0.0"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_0.0" [label="Leaf: Survived
+PassengerId: [99, 260, 273, 447, 652, 721, 881]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_0.0" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_0.0"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp" -> "root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age" [label=Age]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0" -> "root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Child" [label=Child]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age" -> "root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Child"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Child" [label="Leaf: Survived
+PassengerId: [531, 751]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Child" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Child"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age" -> "root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult" -> "root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked" -> "root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked_0.0"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked_0.0_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked_0.0" -> "root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked_0.0_Fare"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked_0.0_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked_0.0_Fare" -> "root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked_0.0_Fare_Medium"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked_0.0_Fare_Medium" [label="Leaf: Survived
+PassengerId: [313, 324, 417, 441, 581, 671, 802]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked_0.0_Fare_Medium" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_1.0_Age_Adult_Embarked_0.0_Fare_Medium"
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp" -> "root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_2.0"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_2.0" [label="Leaf: Survived
+PassengerId: [601, 619]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_2.0" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_1.0_SibSp_2.0"
+	"root_Sex_Female_Pclass_2.0_Parch_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_2.0_Parch" -> "root_Sex_Female_Pclass_2.0_Parch_2.0"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_2.0" [label="Leaf: Survived
+PassengerId: [44, 59, 238, 248, 418, 473, 507, 536, 609, 616, 755]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_2.0" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_2.0"
+	"root_Sex_Female_Pclass_2.0_Parch_3.0" [label=3.0]
+	"root_Sex_Female_Pclass_2.0_Parch" -> "root_Sex_Female_Pclass_2.0_Parch_3.0"
+	"leaf_root_Sex_Female_Pclass_2.0_Parch_3.0" [label="Leaf: Survived
+PassengerId: [438, 775]" shape=box]
+	"root_Sex_Female_Pclass_2.0_Parch_3.0" -> "leaf_root_Sex_Female_Pclass_2.0_Parch_3.0"
+	"root_Sex_Female_Pclass_3.0" [label=3.0]
+	root_Sex_Female_Pclass -> "root_Sex_Female_Pclass_3.0"
+	"root_Sex_Female_Pclass_3.0_SibSp" [label=SibSp]
+	"root_Sex_Female_Pclass_3.0" -> "root_Sex_Female_Pclass_3.0_SibSp"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch" [label=Parch]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age" [label=Age]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Child" [label=Child]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Child"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Child" [label="Leaf: Survived
+PassengerId: [778]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Child" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Child"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult" [label="Young Adult"]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_0.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_0.0" [label="Leaf: Not Survived
+PassengerId: [15]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_0.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare_Low" [label=Low]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare_Low"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare_Low" [label="Leaf: Survived
+PassengerId: [781, 876]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare_Low" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare_Low"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare_Medium"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare_Medium" [label="Leaf: Not Survived
+PassengerId: [115]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare_Medium" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_1.0_Fare_Medium"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_2.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_2.0" [label="Leaf: Survived
+PassengerId: [23, 157, 209]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_2.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Young Adult_Embarked_2.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare_Low" [label=Low]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare_Low"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare_Low" [label="Leaf: Not Survived
+PassengerId: [3, 101, 107, 142, 217, 247, 277, 294, 316, 377, 397, 405, 475, 504, 535, 555, 650, 678, 787, 798, 808, 817]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare_Low" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare_Low"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare_Medium"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare_Medium" [label="Leaf: Not Survived
+PassengerId: [80, 883]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare_Medium" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_0.0_Fare_Medium"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_2.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_2.0_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_2.0" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_2.0_Fare"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_2.0_Fare_Low" [label=Low]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_2.0_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_2.0_Fare_Low"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_2.0_Fare_Low" [label="Leaf: Not Survived
+PassengerId: [45, 290, 502, 655, 768]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_2.0_Fare_Low" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Adult_Embarked_2.0_Fare_Low"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Senior" [label=Senior]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Senior"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Senior" [label="Leaf: Survived
+PassengerId: [484]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Senior" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_0.0_Age_Senior"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Low" [label=Low]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Low"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Low" [label="Leaf: Survived
+PassengerId: [856]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Low" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Low"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age" [label=Age]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age_Child" [label=Child]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age_Child"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age_Child" [label="Leaf: Not Survived
+PassengerId: [206, 480]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age_Child" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age_Child"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age_Adult"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age_Adult" [label="Leaf: Survived
+PassengerId: [824]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age_Adult" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_0.0_Age_Adult"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age" [label=Age]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age_Child" [label=Child]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age_Child"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age_Child" [label="Leaf: Survived
+PassengerId: [692]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age_Child" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age_Child"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age_Adult"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age_Adult" [label="Leaf: Not Survived
+PassengerId: [363, 703]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age_Adult" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_1.0_Fare_Medium_Embarked_1.0_Age_Adult"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age" [label=Age]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Child" [label=Child]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Child"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Child_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Child" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Child_Fare"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Child_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Child_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Child_Fare_Medium"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Child_Fare_Medium" [label="Leaf: Not Survived
+PassengerId: [185, 420]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Child_Fare_Medium" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Child_Fare_Medium"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Adult"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Adult_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Adult" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Adult_Fare"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Adult_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Adult_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Adult_Fare_Medium"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Adult_Fare_Medium" [label="Leaf: Survived
+PassengerId: [9, 255, 395]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Adult_Fare_Medium" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_0.0_Age_Adult_Fare_Medium"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_1.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_1.0" [label="Leaf: Survived
+PassengerId: [256, 382]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_1.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_2.0_Embarked_1.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_3.0" [label=3.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_3.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_3.0" [label="Leaf: Survived
+PassengerId: [859]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_3.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_3.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_4.0" [label=4.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_4.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_4.0" [label="Leaf: Not Survived
+PassengerId: [568]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_4.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_4.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_5.0" [label=5.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_5.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_5.0" [label="Leaf: Not Survived
+PassengerId: [639, 886]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_5.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_0.0_Parch_5.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_3.0_SibSp" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch" [label=Parch]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Low" [label=Low]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Low"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Low_Age" [label=Age]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Low" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Low_Age"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Low_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Low_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Low_Age_Adult"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Low_Age_Adult" [label="Leaf: Not Survived
+PassengerId: [41, 114, 193, 403, 730]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Low_Age_Adult" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Low_Age_Adult"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Medium"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Medium_Age" [label=Age]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Medium" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Medium_Age"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Medium_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Medium_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Medium_Age_Adult"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Medium_Age_Adult" [label="Leaf: Not Survived
+PassengerId: [19, 50, 133, 143, 560, 618]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Medium_Age_Adult" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_0.0_Fare_Medium_Age_Adult"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age" [label=Age]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age_Young Adult" [label="Young Adult"]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age_Young Adult"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age_Young Adult_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age_Young Adult" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age_Young Adult_Fare"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age_Young Adult_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age_Young Adult_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age_Young Adult_Fare_Medium"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age_Young Adult_Fare_Medium" [label="Leaf: Survived
+PassengerId: [40, 112, 831]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age_Young Adult_Fare_Medium" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_0.0_Embarked_1.0_Age_Young Adult_Fare_Medium"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age" [label=Age]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Child" [label=Child]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Child"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Child" [label="Leaf: Survived
+PassengerId: [11, 173]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Child" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Child"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Adult"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Adult_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Adult" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Adult_Fare"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Adult_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Adult_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Adult_Fare_Medium"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Adult_Fare_Medium" [label="Leaf: Not Survived
+PassengerId: [252, 280, 329, 424, 800]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Adult_Fare_Medium" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_0.0_Age_Adult_Fare_Medium"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_1.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_1.0" [label="Leaf: Not Survived
+PassengerId: [853]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_1.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_1.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_2.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_2.0" [label="Leaf: Not Survived
+PassengerId: [658]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_2.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_1.0_Embarked_2.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_3.0" [label=3.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_3.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_3.0" [label="Leaf: Not Survived
+PassengerId: [737]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_3.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_3.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_4.0" [label=4.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_4.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_4.0" [label="Leaf: Not Survived
+PassengerId: [168]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_4.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_4.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0" [label=5.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare_Medium"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare_Medium_Age" [label=Age]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare_Medium" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare_Medium_Age"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare_Medium_Age_Adult" [label=Adult]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare_Medium_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare_Medium_Age_Adult"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare_Medium_Age_Adult" [label="Leaf: Not Survived
+PassengerId: [26, 611]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare_Medium_Age_Adult" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_5.0_Embarked_0.0_Fare_Medium_Age_Adult"
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_6.0" [label=6.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_6.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_6.0" [label="Leaf: Not Survived
+PassengerId: [679]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_6.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_1.0_Parch_6.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_3.0_SibSp" -> "root_Sex_Female_Pclass_3.0_SibSp_2.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch" [label=Parch]
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0" -> "root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch"
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_0.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_0.0" [label="Leaf: Not Survived
+PassengerId: [39]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_0.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_1.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_1.0" [label="Leaf: Survived
+PassengerId: [449, 470, 645]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_1.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_1.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_2.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_2.0" [label="Leaf: Not Survived
+PassengerId: [148, 437]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_2.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_2.0_Parch_2.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0" [label=3.0]
+	"root_Sex_Female_Pclass_3.0_SibSp" -> "root_Sex_Female_Pclass_3.0_SibSp_3.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch" [label=Parch]
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0" -> "root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch"
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_0.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_0.0" [label="Leaf: Survived
+PassengerId: [86]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_0.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_1.0" [label=1.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_1.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_1.0" [label="Leaf: Not Survived
+PassengerId: [25, 375]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_1.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_1.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_2.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_2.0" [label="Leaf: Not Survived
+PassengerId: [635, 643]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_2.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_3.0_Parch_2.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0" [label=4.0]
+	"root_Sex_Female_Pclass_3.0_SibSp" -> "root_Sex_Female_Pclass_3.0_SibSp_4.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age" [label=Age]
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0" -> "root_Sex_Female_Pclass_3.0_SibSp_4.0_Age"
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child" [label=Child]
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child"
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare" [label=Fare]
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child" -> "root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare"
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium" [label=Medium]
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare" -> "root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium"
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked" [label=Embarked]
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium" -> "root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked"
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked_0.0" [label=0.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked" -> "root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked_0.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked_0.0_Parch" [label=Parch]
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked_0.0" -> "root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked_0.0_Parch"
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked_0.0_Parch_2.0" [label=2.0]
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked_0.0_Parch" -> "root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked_0.0_Parch_2.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked_0.0_Parch_2.0" [label="Leaf: Not Survived
+PassengerId: [120, 234, 542, 543, 814]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked_0.0_Parch_2.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Child_Fare_Medium_Embarked_0.0_Parch_2.0"
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Young Adult" [label="Young Adult"]
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age" -> "root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Young Adult"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Young Adult" [label="Leaf: Survived
+PassengerId: [69]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Young Adult" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_4.0_Age_Young Adult"
+	"root_Sex_Female_Pclass_3.0_SibSp_5.0" [label=5.0]
+	"root_Sex_Female_Pclass_3.0_SibSp" -> "root_Sex_Female_Pclass_3.0_SibSp_5.0"
+	"leaf_root_Sex_Female_Pclass_3.0_SibSp_5.0" [label="Leaf: Not Survived
+PassengerId: [72]" shape=box]
+	"root_Sex_Female_Pclass_3.0_SibSp_5.0" -> "leaf_root_Sex_Female_Pclass_3.0_SibSp_5.0"
+}
